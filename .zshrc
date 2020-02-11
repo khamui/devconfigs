@@ -23,7 +23,7 @@ alias zshreload='source ~/.zshrc'
 alias cp='cp -i'
 alias mv='mv -i'
 alias weather='curl v2.wttr.in'
-alias upconfig='cp /Documents/Development/devconfigs/{.hyper.js,.gitconfig,.zshenv,.zshrc,.zshrceval} ~/'
+alias upconfig='cp ~/Documents/Development/devconfigs/{.hyper.js,.gitconfig,.zshenv,.zshrc,.zshrceval} ~/'
 
 # work aliases
 alias rd='cd $ENV'
