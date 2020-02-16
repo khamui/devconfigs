@@ -8,9 +8,9 @@ alias ....='cd ../../..'
 alias k='cd ~'
 alias d='cd ~/Documents/Development'
 alias jsd='cd ~/Documents/Development/JavaScript'
-alias gl='cd ~/Documents/Development/JavaScript/glance'
-alias gla='cd ~/Documents/Development/JavaScript/glance; au run --port 9000 --watch'
-alias gls='node ~/Documents/Development/JavaScript/glance/server/server.js'
+alias gl='cd ~/Documents/Development/JavaScript/glance-app'
+alias gla='cd ~/Documents/Development/JavaScript/glance-app; au run --port 9000 --watch'
+alias gls='node ~/Documents/Development/JavaScript/glance-app/server/server.js'
 alias dt='cd ~/Desktop'
 
 # command aliases
