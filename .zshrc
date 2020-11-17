@@ -24,9 +24,9 @@ alias ....='cd ../../..'
 alias k='cd ~'
 alias d='cd ~/Documents/Development'
 alias jsd='cd ~/Documents/Development/JavaScript'
-alias gl='cd ~/Documents/Development/JavaScript/glance-app'
-alias gla='cd ~/Documents/Development/JavaScript/glance-app; au run --port 9000 --watch'
-alias gls='node ~/Documents/Development/JavaScript/glance-app/server/server.js'
+alias gl='cd ~/Documents/Development/JavaScript/github-repos/glance-app'
+alias gla='cd ~/Documents/Development/JavaScript/github-repos/glance-app; au run --port 9000 --watch'
+alias gls='node ~/Documents/Development/JavaScript/glance-app/github-repos/server/server.js'
 alias dt='cd ~/Desktop'
 
 # command aliases
@@ -35,20 +35,24 @@ alias s='git status'
 alias b='git branch'
 alias a='git add .'
 alias co='git checkout '
+alias po='git pull origin $(git rev-parse --abbrev-ref HEAD)'
 alias hist='git log --oneline --graph --decorate --all'
 alias zshreload='source ~/.zshrc'
 alias cp='cp -i'
 alias mv='mv -i'
 alias weather='curl v2.wttr.in'
-alias upconfig='cp ~/Documents/Development/devconfigs/{.hyper.js,.gitconfig,.zshenv,.zshrc,.zshrceval} ~/'
+alias upconfig='cp -R ~/Documents/Development/devconfigs/{.vim,.gitconfig,.zshenv,.zshrc,.zshrceval} ~/'
+alias puconfig='cp -R ~/{.vim,.gitconfig,.zshenv,.zshrc,.zshrceval} ~/Documents/Development/devconfigs/'
 alias jup='cd ~/Documents/Development/Jupyter; jupyter-lab --browser=chrome'
 alias jupn='cd ~/Documents/Development/Jupyter; jupyter notebook --browser=chrome'
 
 # work aliases
 alias rd='cd $ENV'
 alias wb='cd $ENV/webrand'
+alias dy='cd $ENV/desygner'
 alias wbb='cd $ENV/webrand/builder'
 alias wbg='cd $ENV/webrand/builder; gulp build && gulp watch'
+alias dyg='cd $ENV/desygner/utils/build; gulp watch'
 alias sc='cd $ENV/_helpers/sync-tool; npm start'
 
 # env functions
@@ -71,7 +75,7 @@ wb:install () {
   sed -i '' -E 's,"(github|npm)\:\*": "../web/vendor,"\1\:\*": "vendor,g' config.js
 }
 
-wb:gulp:all() {
+wb:g:a() {
   wb:install
   gulp bundle
   gulp build

@@ -1,6 +1,6 @@
 [user]
-	email = kha@desygner.com
-	name = Kha Tran
+	email = khamui@me.com
+	name = khamui
 [core]
 	excludesfile = /Users/kha/.gitignore_global
 	editor = code -w
@@ -17,4 +17,6 @@
 [difftool "vscode"]
 	cmd = "code --wait --diff  "
 [push]
+	default = simple
+[pull]
 	default = simple

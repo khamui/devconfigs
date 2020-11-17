@@ -1,0 +1,67 @@
+execute pathogen#infect()
+syntax on
+autocmd vimenter * NERDTree
+colorscheme iceberg 
+"set bg=dark
+let g:airline_theme = 'dark'
+let g:ale_linters = {
+\   'javascript': ['eslint'],
+\   'typescript': ['tsserver', 'tslint']
+\}
+
+" Keep Plug commands between plug#begin() and plug#end().
+call plug#begin()
+
+" AUTOCOMPLETION
+Plug 'neoclide/coc.nvim' , { 'branch' : 'release' }
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'leafgarland/typescript-vim'
+Plug 'HerringtonDarkholme/yats'
+
+call plug#end()
+
+let g:coc_global_extensions = [ 'coc-tsserver' ]
+filetype plugin indent on
+
+" random settings
+let g:coc_disable_startup_warning = 1
+let $RTP=split(&runtimepath, ',')[0]
+let $RC="$HOME/.vim/vimrc"
+set path=.,**
+set re=0
+
+" Indentation
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set expandtab
+set autoindent
+set smartindent
+
+" Ruler
+setlocal colorcolumn=80
+
+" Numbers
+set number
+set numberwidth=4
+set ruler
+
+" Delete characters outside of insert area
+set backspace=indent,eol,start
+
+" Disable backups and swap files
+set nobackup
+set nowritebackup
+set noswapfile
+
+" Enable search options
+set is
+" set hls
+
+" Nerdtree
+let NERDTreeMapOpenInTab='<Right>'
+
+" Keymappings
+nmap <C-n> :NERDTreeToggle<CR>
+nmap <C-f> :Files<CR>
