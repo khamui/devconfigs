@@ -1,8 +1,8 @@
 [user]
-	email = khamui@me.com
-	name = khamui
+	email = k.tran@liqd.net
+	name = Kha
 [core]
-	excludesfile = /Users/kha/.gitignore_global
+	excludesfile = /Users/khamui/Desygner/remote_dev/webrand/.gitignore
 	editor = code -w
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"

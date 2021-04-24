@@ -28,6 +28,12 @@ alias gl='cd ~/Documents/Development/JavaScript/github-repos/glance-app'
 alias gla='cd ~/Documents/Development/JavaScript/github-repos/glance-app; au run --port 9000 --watch'
 alias gls='node ~/Documents/Development/JavaScript/glance-app/github-repos/server/server.js'
 alias dt='cd ~/Desktop'
+alias fa='cd ~/Documents/Development/JavaScript/github-repos/forest-app'
+alias fas='cd ~/Documents/Development/JavaScript/github-repos/forest-app; ng serve'
+alias rpg='cd ~/Documents/Development/JavaScript/react-pground'
+alias lqssh='ssh -i id_ed25519 kha@conway-ssh.liqd.net'
+alias lq='cd ~/Documents/Development/LIQD'
+alias venv='source myvenv/bin/activate'
 
 # command aliases
 alias ls='ls -alrt -G'
@@ -38,11 +44,11 @@ alias co='git checkout '
 alias po='git pull origin $(git rev-parse --abbrev-ref HEAD)'
 alias hist='git log --oneline --graph --decorate --all'
 alias zshreload='source ~/.zshrc'
-alias cp='cp -i'
-alias mv='mv -i'
+alias cp='cp'
+alias mv='mv'
 alias weather='curl v2.wttr.in'
 alias upconfig='cp -R ~/Documents/Development/devconfigs/{.vim,.gitconfig,.zshenv,.zshrc,.zshrceval} ~/'
-alias puconfig='cp -R ~/{.vim,.gitconfig,.zshenv,.zshrc,.zshrceval} ~/Documents/Development/devconfigs/'
+alias puconfig='cp -rf ~/{.vim,.gitconfig,.zshenv,.zshrc,.zshrceval} ~/Documents/Development/devconfigs/'
 alias jup='cd ~/Documents/Development/Jupyter; jupyter-lab --browser=chrome'
 alias jupn='cd ~/Documents/Development/Jupyter; jupyter notebook --browser=chrome'
 
@@ -54,6 +60,8 @@ alias wbb='cd $ENV/webrand/builder'
 alias wbg='cd $ENV/webrand/builder; gulp build && gulp watch'
 alias dyg='cd $ENV/desygner/utils/build; gulp watch'
 alias sc='cd $ENV/_helpers/sync-tool; npm start'
+alias lqdeploy='ssh build@build.liqd.net deploy '
+alias lqbuild='ssh build@build.liqd.net build '
 
 # env functions
 alias setw=setenv_work
@@ -84,4 +92,17 @@ wb:g:a() {
 
 wb:s() {
 	unison -sshargs="-i /Users/khamui/.ssh/kha_office" /Users/khamui/Desygner/remote_dev/webrand ssh://platypus@192.168.1.100//home/platypus/dev/data/sync/kha/webrand 2>/dev/tty -batch -confirmbigdel=false -perms=0 -prefer newer -ignore="Name node_modules" -ignore="Name bower_components" -ignore="Name var/cache" -ignore="Name ./vendor" -ignore="Name .git"
+}
+
+o:web() {
+  start='open -a safari '
+  calamari='https://desygner.calamari.io'
+  gsuite='https://workspace.google.com/dashboard'
+  youtrack='https://desygner-team.myjetbrains.com/youtrack/'
+  beanstalk='https://inkive.beanstalkapp.com'
+  
+  eval $start$calamari
+  eval $start$gsuite
+  eval $start$youtrack
+  eval $start$beanstalk
 }

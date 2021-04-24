@@ -1,0 +1,33 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "@typescript-eslint"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "rules": {
+    // OFF
+    "no-unexpected-multiline": "off",
+    // WARN
+    "no-console": "warn",
+    "no-extra-parens": "warn",
+    "no-multi-spaces": "warn",
+    "no-lone-blocks": "warn",
+    "wrap-iife": "warn",
+    // ERRORS
+    "indent": ["error", 2],
+    "no-await-in-loop": "error",
+    "no-new": "error",
+    "require-await": "error",
+    "brace-style": ["error", "allman", { "allowSingleLine": true }],
+    "no-trailing-spaces": "error",
+    "no-unneeded-ternary": "error",
+    "object-curly-newline": "error",
+    "quotes": ["error", "single"],
+    "object-curly-spacing": ["error", "always"]
+  }
+}
