@@ -24,16 +24,13 @@ alias ....='cd ../../..'
 alias k='cd ~'
 alias d='cd ~/Documents/Development'
 alias jsd='cd ~/Documents/Development/JavaScript'
-alias gl='cd ~/Documents/Development/JavaScript/github-repos/glance-app'
-alias gla='cd ~/Documents/Development/JavaScript/github-repos/glance-app; au run --port 9000 --watch'
-alias gls='node ~/Documents/Development/JavaScript/glance-app/github-repos/server/server.js'
 alias dt='cd ~/Desktop'
 alias fa='cd ~/Documents/Development/JavaScript/github-repos/forest-app'
 alias fas='cd ~/Documents/Development/JavaScript/github-repos/forest-app; ng serve'
 alias rpg='cd ~/Documents/Development/JavaScript/react-pground'
 alias lqssh='ssh -i id_ed25519 kha@conway-ssh.liqd.net'
 alias lq='cd ~/Documents/Development/LIQD'
-alias venv='source myvenv/bin/activate'
+alias venv='source venv/bin/activate'
 
 # command aliases
 alias ls='ls -alrt -G'
@@ -44,8 +41,6 @@ alias co='git checkout '
 alias po='git pull origin $(git rev-parse --abbrev-ref HEAD)'
 alias hist='git log --oneline --graph --decorate --all'
 alias zshreload='source ~/.zshrc'
-alias cp='cp'
-alias mv='mv'
 alias weather='curl v2.wttr.in'
 alias upconfig='cp -R ~/Documents/Development/devconfigs/{.vim,.gitconfig,.zshenv,.zshrc,.zshrceval} ~/'
 alias puconfig='cp -rf ~/{.vim,.gitconfig,.zshenv,.zshrc,.zshrceval} ~/Documents/Development/devconfigs/'
@@ -53,19 +48,9 @@ alias jup='cd ~/Documents/Development/Jupyter; jupyter-lab --browser=chrome'
 alias jupn='cd ~/Documents/Development/Jupyter; jupyter notebook --browser=chrome'
 
 # work aliases
-alias rd='cd $ENV'
-alias wb='cd $ENV/webrand'
-alias dy='cd $ENV/desygner'
-alias wbb='cd $ENV/webrand/builder'
-alias wbg='cd $ENV/webrand/builder; gulp build && gulp watch'
-alias dyg='cd $ENV/desygner/utils/build; gulp watch'
-alias sc='cd $ENV/_helpers/sync-tool; npm start'
+alias wd='cd $ENV'
 alias lqdeploy='ssh build@build.liqd.net deploy '
 alias lqbuild='ssh build@build.liqd.net build '
-
-# env functions
-alias setw=setenv_work
-alias setr=setenv_remote
 
 # fzf searcher
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
